@@ -1,3 +1,5 @@
+// g++ main.cpp && ./a.out < test_100
+
 #include <iostream>
 #include <algorithm>
 #include <vector>
