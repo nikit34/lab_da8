@@ -3,6 +3,7 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include <chrono>
 
 using namespace std;
 
@@ -57,6 +58,8 @@ int main() {
     ios_base::sync_with_stdio(false);
 	cin.tie(nullptr);
 
+    auto start = chrono::high_resolution_clock::now();
+
 	int n;
     int m;
 	cin >> n;
@@ -68,6 +71,10 @@ int main() {
 	cin >> m;
 
 	SelectorSection(section, m);
+
+    auto stop = chrono::high_resolution_clock::now();
+    auto duration = chrono::duration_cast<std::chrono::microseconds>(stop - start);
+    std::cout << endl << "time: " << duration.count() << std::endl;
 
 	return 0;
 }

@@ -1,7 +1,7 @@
 from random import choice
 
 
-NUMBERS_LINES = 100
+NUMBERS_LINES = 250000
 
 with open(f'test_{NUMBERS_LINES}', 'w') as f:
     f.write(str(NUMBERS_LINES) + '\n')
